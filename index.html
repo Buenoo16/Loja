@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<style>
+ *{
+    
+    padding: 0;
+    font-size: 20px;
+      font-family: 'Assistant', sans-serif;
+      
+      margin: 0;
+      
+    
+  }
+  .loja-header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #104A80;
+  width: 100%;
+  box-shadow: 4px 11px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: solid 2px #d4af37;
+}
+
+.logo img {
+  width: 100px; 
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.search-box input[type="search"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #F5F9F8;
+  box-shadow: 4px 11px 10px rgba(0, 0, 0, 0.7);
+  border: solid 2px #d4af37;
+  
+  
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background-color: #F5F9F8;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  margin-left: 10px;
+  color: black;
+  transition: background-color 0.5s ease;
+  box-shadow: 4px 11px 10px rgba(0, 0, 0, 0.7)
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.search-box button:hover {
+background-color: #d4af37; 
+  color: #0F4C83;
+  transform: scale(1.2);
+
+
+
+}
+
+
+.perfil img {
+  width: 50px;
+  margin-left: 15px; 
+  margin-right: 20px;
+}
+
+.categoria {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #658EC6;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 4px 11px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 18px;
+  background-image: linear-gradient(#104A80, #316BBF #5597ffee)
+  
+  }
+  
+.categoria h2 a {
+
+    color: white;
+    
+    text-decoration: none;
+  text-shadow: 2px 4px 2px black;
+  transition: background-color 0.4s ease;
+  padding: 10px;
+  font-size: 30px;
+  
+  
+  
+
+    }
+    
+    .categoria h2 a:hover{
+       color: #d4af37; 
+  
+    }
+    
+    .img-main{
+    width: 90%;
+        height: 350px;
+        border: solid 2px black;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 40px;
+        background-image: url("https://i.ibb.co/Hhc4q73/discos-de-vinil-de-vista-superior-com-fundo-azul.jpg");
+    background-size: cover;
+    box-shadow: 8px 5px 35px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    transition: background-image 0.8s ease;
+    overflow: hidden;
+  position: relative;
+  
+  
+}
+   
+
+    
+    .img-main:hover{
+    
+    background-image: url("https://s2.glbimg.com/uZ0I0_ESHlGFrwNGcuw8xoc0W4M=/smart/e.glbimg.com/og/ed/f/original/2020/05/07/discos_site.gif");
+    background-size: cover;
+  background-position: center;
+  
+        }
+         
+    .fundo-tela{
+        
+  
+        
+  
+  
+        
+    }
+    
+    .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  padding: 50px;
+}
+
+
+.item {
+  text-align: center;
+  color: black;
+ background-color: white;
+  height: 575px;
+  width: 320px;
+  margin-bottom: 5px;
+  border-radius: 25px;
+  
+  box-shadow: 8px 5px 35px rgba(0, 0, 0, 0.8);
+ 
+  border: solid 0.5px black;
+ 
+ 
+  
+  
+}
+
+
+
+
+.item h2 a{
+    color: #104A80;
+    font-size: 23px;
+    text-decoration: none;
+  text-shadow: 1px 1px 1px white;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+.item h2 a:hover{
+   color: #d4af37;
+   text-shadow: 1px 1px 3px black;
+   
+
+
+
+}
+
+.item h2 a, p {
+  margin: 10px 0;
+  
+}
+.item h3{
+    font-size: 23px;
+  font-family: Arial, sans-serif; 
+  text-shadow: 1px 1px 2px gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ 
+}
+.item p{
+    font-size: 15px;
+     font-family: Arial, sans-serif;
+     
+     
+}
+
+
+.comprar-botao {
+
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #104A80;
+  color: #fff;
+  border: solid 2px #d4af37;
+  cursor: pointer;
+  box-shadow: 2px 8px 7px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.7s ease;
+  margin-right: 7px;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+  
+  
+  
+}
+
+.comprar-botao:hover {
+
+  background-color: #d4af37; 
+  color: #0F4C83;
+  transform: scale(1.2);
+ 
+  
+}
+
+.produtos-loja{
+    width: 90%;
+    border-radius: 27px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    border: solid 0.5px black;
+    transform: scale(1);
+  transition: transform 0.5s ease;
+    
+    
+    
+}
+.produtos-loja:hover{
+    transform: scale(1.1);
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  
+}
+
+footer .main {
+
+  width: 100%;
+  height: 200px;
+  background-color: #104A80;
+  padding: 20px 10px;
+  border-radius: 3px;
+  padding-right: 35px;
+}
+
+.footer-links {
+  padding-right: 35px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.footer-company,
+.link-uteis,
+.footer-contact,
+.rede-social {
+  color: white;
+  height: 100%;
+  
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.main .rede-social img {
+  width: 32px;
+  height: 32px;
+}
+
+footer .inferior {
+  width: 100%;
+  height: 50px;
+  background-color: #104A80;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 44px;
+}
+  h6 a {
+      color:white;
+  }
+  .shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 15px;
+  }
+
+.comprar-botao,
+  .shop img {
+    display: flex;
+    align-items: center;
+  }
+  
+  .shop img{
+      filter: drop-shadow(3px 2px 2px rgba(0, 0, 0, 0.9));
+      
+  }
+  .perfil img{
+  filter: drop-shadow(3px 2px 2px rgba(0, 0, 0, 0.9));
+      
+  }
+  
+    
+</style>
+<body>
+    
+    <header class="loja-header">
+  <div class="logo">
+    <img src="http://lepassetempsderose.l.e.pic.centerblog.net/e4df38ee.gif" border="0"  alt="Logo">
+  </div>
+  <div class="search-box">
+    <input type="search" placeholder="Pesquisar produtos">
+    <button class="pesquisar-prod">
+        <img src="https://i.ibb.co/wpx37X5/lupa.png" alt="lupa" border="0">
+    </button>
+  </div>
+  <div class="perfil">
+            <a href="#"><img src="https://i.ibb.co/vzM7zQ0/icons8-shopping-bag-50.png" alt="shopping-cart" border="0"></a>
+            
+            <a href="#"><img src="https://i.ibb.co/tLT6RLs/icons8-user-50.png" alt="user" border="0"></a>
+  </div>
+</header>
+
+
+<div class="categoria">
+  <h2><a href="#">HIP HOP</a></h2>
+  <h2><a href="#">POP</a></h2>
+  <h2><a href="#">R&B</a></h2>
+  <h2><a href="#">ROCK</a></h2>
+  <h2><a href="#">SOUL</a></h2>
+   <h2><a href="#">INDIE</a></h2>
+</div>
+
+
+
+    <div class="img-main"
+   <div class="fundo-tela"
+   
+   
+   </div>
+   </div>
+
+    
+            
+            
+
+    <div class="flex-container">
+  <div class="item">
+  <a href="#">
+  <img src="https://i.ibb.co/85nXWmg/s.jpg" alt="Frank Ocean - Blonde" class="produtos-loja">
+</a>
+
+
+    <h2><a href="#">Frank Ocean - Blonde</a></h2>
+    
+    <p>"Blonde" é o segundo álbum de estúdio do cantor e compositor norte-americano Frank Ocean, lançado em agosto de 2016...</p>
+    
+    
+      <h3>R$467,00</h3>
+      <p class="parcela">ou 10x de R$46,70</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  <div class="item">
+   <img src="https://i.ibb.co/7Rjr89J/images-9.jpg" alt="Tyler, the creator - Flower Boy" class="produtos-loja">
+
+
+    <h2><a href="#">Tyler, the Creator - Flower Boy </a></h2>
+    
+    <p>"Flower Boy" é o quarto álbum de estúdio do rapper, cantor e produtor americano Tyler, The Creator.</p> 
+    
+    
+      <h3>R$267,00</h3>
+      <p class="parcela">ou 10x de R$26,70</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  
+  <div class="item">
+    <img src="https://i.ibb.co/QHvSftf/kanye-west-graduation-60309902-vinyl-930678-2048x2048.jpg" alt="kanye-west-graduation" class="produtos-loja">
+
+
+    <h2><a href="#">Kanye West - Graduation</a></h2>
+    
+    <p>"Graduation" é o terceiro álbum de estúdio do rapper Kanye West, lançado em 2007. O álbum foi um marco na carreira de Kanye West...</p>
+    
+    
+      <h3>R$509,99</h3>
+      <p class="parcela">ou 10x de R$50,99</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  
+  <div class="item">
+    <img src="https://i.ibb.co/x6DHgqB/0602557227512.jpg"  alt="The Weeknd - Starboy" class="produtos-loja">
+
+
+    <h2><a href="#">The Weeknd - Starboy</a></h2>
+    
+    <p>"Starboy" é o terceiro álbum de estúdio do cantor canadense The Weeknd, lançado em 2016. O álbum...</p>
+    
+    
+      <h3>R$199,00</h3>
+      <p class="parcela">ou 10x de R$19,90</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  </div>
+  
+  <div class="flex-container">
+  <div class="item">
+    <img src="https://i.ibb.co/V9P4qm1/images-10.jpg"alt="Kendrick Lamar - DAMN" class="produtos-loja">
+
+
+    <h2><a href="#">Kendrick Lamar - DAMN.</a></h2>
+    
+    <p>"Damn" é o quarto álbum de estúdio do renomado rapper Kendrick Lamar, lançado em 2017. O álbum recebeu...</p>
+    
+    
+      <h3>R$399,00</h3>
+      <p class="parcela">ou 10x de R$39,90</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  
+ <div class="item">
+    <img src="https://i.ibb.co/85nXWmg/s.jpg" alt="Frank Ocean - Blonde" class="produtos-loja">
+
+
+    <h2><a href="#">Frank Ocean - Blonde</a></h2>
+    
+    <p>lorem a little more a year ago today was a good chance of oj Simpson and nick</p>
+    
+    
+      <h3>R$267,00</h3>
+      <p class="parcela">ou 10x de R$26,70</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  
+  <div class="item">
+    <img src="https://i.ibb.co/85nXWmg/s.jpg" alt="Frank Ocean - Blonde" class="produtos-loja">
+
+
+    <h2><a href="#">Frank Ocean - Blonde</a></h2>
+    
+    <p>lorem a little more a year ago today was a good chance of oj Simpson and nick</p>
+    
+    
+      <h3>R$267,00</h3>
+      <p class="parcela">ou 10x de R$26,70</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+  
+  <div class="item">
+    <img src="https://i.ibb.co/85nXWmg/s.jpg" alt="Frank Ocean - Blonde" class="produtos-loja">
+
+
+    <h2><a href="#">Frank Ocean - Blonde</a></h2>
+    
+    <p>lorem a little more a year ago today was a good chance of oj Simpson and nick</p>
+    
+    
+      <h3>R$267,00</h3>
+      <p class="parcela">ou 10x de R$26,70</p>
+    <div class="shop">
+    <button class="comprar-botao">Comprar</button>
+    <a href="#"><img src="https://i.ibb.co/hFhVN1n/icons8-shopping-cart-50-3.png" alt="icons8-shopping-cart-50-3" border="0"></a>
+  </div>
+  </div>
+  
+  
+</div>
+
+    <br>
+    <footer>
+        <div class="main">
+        <div class="content footer-links">
+          <div class="footer-company">
+            <h4>Conteúdo</h4>
+            <h6><a href="sobre.html">Sobre nós</a></h6>
+            <h6><a href="contato.html">Fale conosco</a></h6>
+
+          </div>
+          <div class="link-uteis">
+            <h4>Links Úteis</h4>
+            <h6><a href="link-util-1.html">Link útil<a><h6>
+<h6><a href="link-util-2.html">Link útil</a></h6>
+<h6><a href="ajuda.html">Ajuda</a></h6>
+
+          </div>
+          <div class="rede-social">
+            <h4>Redes sociais</h4>
+            <div class="social-icons">
+              <img src="https://i.ibb.co/FxNqpMG/icons8-instagram-50.png" alt="Instagram" />
+              <a href="#"><img src="https://i.ibb.co/qYVkHS3/icons8-facebook-50.png" alt="facebook" border="0"></a>
+              <a href="https://imgbb.com/"><img src="https://i.ibb.co/V2VnJHL/icons8-tiktok-50.png" alt="tiktok" border="0"></a>
+              <a href="https://imgbb.com/"><img src="https://i.ibb.co/DC3507H/icons8-twitter-50.png" alt="icons8-twitter-50" border="0"></a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <h4>Nossos contatos</h4>
+            <h6><a href="tel:+5515981234627">+55 15981234627</a></h6>
+<h6><a href="mailto:bueno.mateus@aluno.ifsp.edu.br">bueno.mateus@aluno.ifsp.edu.br</a></h6>
+<h6><a href="https://maps.google.com/?q=Itapetininga%20-%20SP">Itapetininga - SP</a></h6>
+
+          </div>
+        </div>
+      </div>
+      <div class="inferior">Mateus Bueno - IT3023508 ©
+      </div>
+      
+    </footer>
+      
+            
+            
+          
+</body>
+</html>
